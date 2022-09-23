@@ -103,13 +103,16 @@ class PromptRequest:
             elif cmd == "new":  # Reset prompt to optional new value
                 self["prompt"] = val
 
+            elif cmd == "add":
+                self["prompt"] += val
+
             elif cmd == "exit":  # Exit the program
                 self.continue_ = False
                 try:
                     file = f"./chats/{self.date}-{get_num(self.date)}.txt"
                     print(file)
                     with open(file, "w+") as f:
-                        f.write(self["prompt"] + "\n")
+                        f.write(self["prompt"].replace("\n\n\n", "\n") + "\n")
                 except FileNotFoundError:
                     print("Oops! You forgot to create a /chats/ folder")
 

@@ -106,6 +106,12 @@ class PromptRequest:
             elif cmd == "add":
                 self["prompt"] += val
 
+            elif cmd == "newline":
+                self["prompt"] += "\n" * int(val)
+
+            elif cmd == "view":
+                print(self["prompt"])
+
             elif cmd == "exit":  # Exit the program
                 self.continue_ = False
                 try:
@@ -140,5 +146,5 @@ class PromptRequest:
                 print(f"Invalid command '{cmd}'")
 
         else:
-            self["prompt"] += "\n\n" + inp
+            self["prompt"] += inp
             self.gen_next = True

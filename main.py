@@ -51,4 +51,4 @@ def view_current_completion():
 
 
 if __name__ == "__main__":
-    start_role_descriptions()
+    call_and_response()

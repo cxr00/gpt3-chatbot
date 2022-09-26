@@ -132,7 +132,7 @@ class PromptRequest:
             elif cmd == "clq":  # Add a tagged colloquialisation to the prompt
                 tag, file = val.split(" ", 1)
                 try:
-                    with open(f"./{file}", "r") as f:
+                    with open(f".\\colloquialisations\\{file}", "r") as f:
                         self["prompt"] += f"\n\n[{tag}]\n\n" + f.read() + f"\n\n[/{tag}]\n\n"
                 except FileNotFoundError:
                     print(f"Oops! ./{file} does not exist.")

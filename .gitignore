@@ -1,5 +1,5 @@
 /models_ref/
-/colloquialisations/
+/colloquialisations/*
 /interviews/
-/chats/
+/chats/*.txt
 /involutions/

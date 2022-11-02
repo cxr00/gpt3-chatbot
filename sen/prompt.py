@@ -135,7 +135,7 @@ class PromptRequest:
                     with open(f".\\colloquialisations\\{file}", "r") as f:
                         self["prompt"] += f"\n\n[{tag}]\n\n" + f.read() + f"\n\n[/{tag}]\n\n"
                 except FileNotFoundError:
-                    print(f"Oops! ./{file} does not exist.")
+                    print(f"Oops! .\\colloquialisations\\{file} does not exist.")
 
             elif cmd in self:  # Alter a parameter of the request
                 new_val = ast.literal_eval(val)

@@ -1,0 +1,11 @@
+Commands:
+
+/help: How did you even get here?
+/new [prompt]: Reset the prompt to something new
+/add [prompt]: Add to the prompt without generating a completion
+/newline [number]: Add an arbitrary number of newlines to the prompt
+/view: See the entire current prompt
+/exit: Save and close the program
+/inject [relative_file_path]: append a file's contents to the current prompt
+/clq [tag] [relative_file_path]: append a colloquialisation with the given tag from the given file path
+/[param name] [new_val]: Change one of the Prompt's core values

@@ -3,6 +3,7 @@
 ## Quickstart
 
 * Add your OpenAI API Key to your system environment variables with the name "OPENAI_API_KEY"
+* In the terminal, navigate to the project folder and run `pip install -r requirements.txt`
 * Run `main.py`
 * Chat with GPT3!
 * Type `/exit` to end your chat and save the results to `/chats/`. It will automatically name it using `YYYY-MM-DD-#.txt` format
